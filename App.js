@@ -5,34 +5,31 @@ import { View, Text, StyleSheet } from 'react-native';
 class App extends Component {
   render() {
     return (
-
       <View>
-
-        <Text style={[styles.color, styles.font]} >
-          Text1
-        </Text>
-        <Text style={[styles.otherColor, styles.font]} >
-          Text2
-        </Text>
-      </View>
+        <Text style={{ color: 'red', backgroundColor: 'green' }}>Text 1</Text>
+        <Text style={styles.text2}>Text 2</Text>
+        <Text style={[styles.color, styles.font]}>Text 3</Text>
+      </View >
     )
   }
 }
 
 const styles = StyleSheet.create({
-  color: {
-    color: 'green',
-    backgroundColor: 'yellow',
+  text2: {
+    color: 'blue',
+    backgroundColor: 'yellow'
+  },
 
+  color: {
+    backgroundColor: 'blue',
+    color: 'red'
   },
   font: {
-    fontWeight: 'bold',
-    fontSize: 40,
-  },
-  otherColor: {
-    color: 'blue'
+    fontSize: 30,
+    fontStyle: 'normal'
   }
 })
+
 
 
 
