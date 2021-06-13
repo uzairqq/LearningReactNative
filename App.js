@@ -7,14 +7,12 @@ class App extends Component {
     return (
 
       <View>
-        <Text style={{ color: 'red' }}>
-          Text 1
+
+        <Text style={[styles.color, styles.font]} >
+          Text1
         </Text>
-        <Text style={{ fontSize: 30 }}>
-          Text 2
-        </Text>
-        <Text style={styles.text3} >
-          Text 3
+        <Text style={[styles.otherColor, styles.font]} >
+          Text2
         </Text>
       </View>
     )
@@ -22,10 +20,17 @@ class App extends Component {
 }
 
 const styles = StyleSheet.create({
-  text3: {
+  color: {
     color: 'green',
+    backgroundColor: 'yellow',
+
+  },
+  font: {
+    fontWeight: 'bold',
     fontSize: 40,
-    backgroundColor: 'yellow'
+  },
+  otherColor: {
+    color: 'blue'
   }
 })
 
