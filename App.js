@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, Text, Button } from 'react-native';
+import { View, Text, StyleSheet } from 'react-native';
 
 
 class App extends Component {
@@ -13,10 +13,21 @@ class App extends Component {
         <Text style={{ fontSize: 30 }}>
           Text 2
         </Text>
+        <Text style={styles.text3} >
+          Text 3
+        </Text>
       </View>
     )
   }
 }
+
+const styles = StyleSheet.create({
+  text3: {
+    color: 'green',
+    fontSize: 40,
+    backgroundColor: 'yellow'
+  }
+})
 
 
 
