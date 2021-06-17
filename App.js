@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, Text, TextInput } from 'react-native';
+import { View, Text, TextInput, Button } from 'react-native';
 
 class App extends Component {
 
@@ -17,6 +17,7 @@ class App extends Component {
         <TextInput placeholder={"Enter your name"}
           onChangeText={(e) => { this.setState({ name: e }) }}
         ></TextInput>
+        <Button title="Submit" onPress={() => { alert(this.state.name) }} />
       </View>
 
 
