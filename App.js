@@ -14,7 +14,9 @@ class App extends Component {
     return (
       <View>
         <Text>{this.state.name}</Text>
-        <TextInput placeholder={"Enter your name"}
+        <TextInput
+          style={{ height: 40, fontSize: 20, borderColor: 'red', color: 'blue' }}
+          placeholder={"Enter your name"}
           onChangeText={(e) => { this.setState({ name: e }) }}
         ></TextInput>
         <Button title="Submit" onPress={() => { alert(this.state.name) }} />
