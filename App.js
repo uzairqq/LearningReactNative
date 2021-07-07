@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
-import { View, Text, TextInput, Button, StyleSheet } from 'react-native';
+import { Text, View, TextInput, Button, StyleSheet } from 'react-native';
+
 
 class App extends Component {
+
   constructor() {
     super();
     this.state = {
@@ -11,31 +13,29 @@ class App extends Component {
     }
   }
   submit() {
-    console.warn(this.state);
+    console.warn("all values", this.state);
   }
 
 
   render() {
     return (
+
       <View>
-        <Text>Simple Form</Text>
+        <Text>SIMPLE FORM</Text>
         <TextInput placeholder="Enter Name"
           onChangeText={(text) => { this.setState({ name: text }) }}
           style={styles.textBox}
         />
-
         <TextInput placeholder="Enter Password"
-          onChangeText={(text) => { this.setState({ password: text }) }}
           secureTextEntry={true}
+          onChangeText={(text) => { this.setState({ password: text }) }}
           style={styles.textBox}
         />
-
         <TextInput placeholder="Enter Address"
           onChangeText={(text) => { this.setState({ address: text }) }}
           style={styles.textBox}
         />
-
-        <Button onPress={() => { this.submit() }} title="Submit" />
+        <Button title="Submit" onPress={() => this.submit()} />
       </View>
     )
   }
