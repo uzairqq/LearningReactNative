@@ -2,27 +2,35 @@ import React, { Component } from 'react';
 import { View, Text, TextInput, Button } from 'react-native';
 
 class App extends Component {
-
   constructor() {
     super();
     this.state = {
-      name: ""
+      name: '',
+      password: '',
+      address: ''
     }
   }
+
 
   render() {
     return (
       <View>
-        <Text>{this.state.name}</Text>
-        <TextInput
-          style={{ height: 40, fontSize: 20, borderColor: 'red', color: 'blue' }}
-          placeholder={"Enter your name"}
-          onChangeText={(e) => { this.setState({ name: e }) }}
-        ></TextInput>
-        <Button title="Submit" onPress={() => { alert(this.state.name) }} />
+        <Text>Simple Form</Text>
+        <TextInput placeholder="Enter Name"
+          onChangeText={(text) => { this.setState({ name: text }) }}
+        // style={styles.textBox}
+        />
+
+        <TextInput placeholder="Enter Password"
+          onChangeText={(text) => { this.setState({ password: text }) }}
+        // style={styles.textBox}
+        />
+
+        <TextInput placeholder="Enter Address"
+          onChangeText={(text) => { this.setState({ address: text }) }}
+        // style={styles.textBox}
+        />
       </View>
-
-
     )
   }
 }
