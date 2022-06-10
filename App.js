@@ -1,21 +1,17 @@
-import React, { Component } from 'react';
-import { Text, View, TextInput, Button, StyleSheet } from 'react-native';
+import { createAppContainer } from "react-navigation";
+import { createStackNavigator } from "react-navigation-stack";
+import HomeScreen from "./src/screens/HomeScreen";
 
-
-class App extends Component {
-
-
-
-
-  render() {
-    return (
-      <View style={{ flex: 1, flexDirection: 'row-reverse' }}>
-        <View style={{ flex: 2, backgroundColor: 'red' }}></View>
-        <View style={{ flex: 1, backgroundColor: 'green' }}></View>
-        <View style={{ flex: 1, backgroundColor: 'blue' }}></View>
-      </View>
-    )
+const navigator = createStackNavigator(
+  {
+    Home: HomeScreen,
+  },
+  {
+    initialRouteName: "Home",
+    defaultNavigationOptions: {
+      title: "App",
+    },
   }
-}
+);
 
-export default App;
+export default createAppContainer(navigator);
