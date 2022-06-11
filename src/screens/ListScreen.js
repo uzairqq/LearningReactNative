@@ -16,6 +16,8 @@ const ListScreen = () => {
   return (
     <View>
       <FlatList
+        horizontal={true}
+        showsHorizontalScrollIndicator={false}
         keyExtractor={(freind) => freind.name}
         data={data}
         renderItem={(element) => {
