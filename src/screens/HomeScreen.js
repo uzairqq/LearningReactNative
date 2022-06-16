@@ -1,14 +1,18 @@
 import React from "react";
-import { View, Text, StyleSheet } from "react-native";
-import ComponentScreen from "./ComponentScreen";
+import { View, Text, StyleSheet, Button } from "react-native";
 
 const HomeScreen = () => {
-  const myName = "Uzair Iqbal";
-
   return (
     <View>
-      <Text style={styles.Title}>Getting Started With React Native!</Text>
-      <Text style={styles.subTitle}>My Name is {myName}</Text>
+      <Text>Hi There!</Text>
+      <Button
+        onPress={() => console.log("Button Pressed Component Screen")}
+        title="Go To Component Screen"
+      />
+      <Button
+        onPress={() => console.log("Button Pressed List Screen Component")}
+        title="Go To List Screen Component"
+      />
     </View>
   );
 };
