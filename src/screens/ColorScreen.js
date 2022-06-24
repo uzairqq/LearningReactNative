@@ -16,8 +16,8 @@ const ColorScreen = () => {
 
       <FlatList
         data={color}
+        keyExtractor={(item) => item}
         renderItem={({ item }) => {
-          console.log(item);
           return (
             <View
               style={{ height: 100, width: 100, backgroundColor: item }}
