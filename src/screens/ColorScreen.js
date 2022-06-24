@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { View, Text, StyleSheet, Button } from "react-native";
+import { View, FlatList, StyleSheet, Button } from "react-native";
 
 const ColorScreen = () => {
   const [color, setColor] = useState([]);
@@ -13,9 +13,18 @@ const ColorScreen = () => {
           setColor([...color, randomRgb()]);
         }}
       />
-      <View
-        style={{ height: 100, width: 100, backgroundColor: randomRgb() }}
-      ></View>
+
+      <FlatList
+        data={color}
+        renderItem={({ item }) => {
+          console.log(item);
+          return (
+            <View
+              style={{ height: 100, width: 100, backgroundColor: item }}
+            ></View>
+          );
+        }}
+      />
     </View>
   );
 };
